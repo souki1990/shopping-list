@@ -9,15 +9,19 @@ const ShoppingItem = props => {
                 {props.item.designation}
                 <input
                     type="checkbox"
-                    onChange={e => props.onCheck(props.item)}
+                    onChange={e => {
+                        setChecked(e.currentTarget.checked);
+                        props.onCheck(props.item)
+                    }}
+                    checked={checked}
                 />
                 <span className="checkmark"></span>
             </label>
             <button
                 className="remove-button"
-                onClick={e => {
+                onClick={() =>
                     props.deleteItem(props.item)
-                }}
+                }
             >
                 <span className="delete-icon"> </span>
             </button>

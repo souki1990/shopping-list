@@ -5,7 +5,7 @@ import ShoppingItem from './shoppingItem';
 const ShoppingList = () => {
     const form = useRef(null)
     const [value, setValue] = useState('')
-    const initiaList = localStorage.getItem('list') ? JSON.parse(localStorage.getItem('list')) : new Array();
+    const initiaList = localStorage.getItem('list') ? JSON.parse(localStorage.getItem('list')) : [];
     const [list, setList] = useState(initiaList)
 
     useEffect(() => {
