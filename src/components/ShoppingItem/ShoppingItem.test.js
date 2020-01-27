@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import ShoppingItem from './shoppingItem';
+import ShoppingItem from './ShoppingItem';
 
 test('Shopping Item should respond to call back props', () => {
 
@@ -16,6 +16,7 @@ test('Shopping Item should respond to call back props', () => {
         />
     )
     fireEvent.click(getByLabelText(item.designation));
+    expect(getByLabelText(item.designation).checked).toBe(true);
     expect(onCheck).toBeCalledWith(item);
     expect(onCheck).toHaveBeenCalledTimes(1);
     fireEvent.click(getByRole('button'));
