@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/react"
+  ],
+  "rules": {
+    "no-console": 1
+  },
+  "plugins": ["react", "import", "prettier"], // here we include the plugins as well, this is like new abilities for ESLint
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect" // you have to tell eslint which version React are using, "detect" will say can you just figure out yourself (from package.json)
+    }
+  }
+}
