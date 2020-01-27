@@ -1,11 +1,11 @@
-A simple application to track of your shopping lists. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple application that you could use to track of your shopping list or todo lists. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 The data is persisted using the HTML5 LocalStorage
 
 ## Features
 
-*.Adding an Item
-*.Marking an item as checked
-*.Removing permanently an item
+- Adding an item
+- Marking an item as checked
+- Removing permanently an item
 
 In the project directory, you can run:
 
