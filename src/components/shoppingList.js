@@ -5,16 +5,11 @@ import ShoppingItem from './shoppingItem';
 const ShoppingList = () => {
     const form = useRef(null)
     const [value, setValue] = useState('')
-    const [list, setList] = useState(
-        localStorage.getItem('list')
-            ? JSON.parse(sessionStorage.getItem('list'))
-            : []
-    )
+    const initiaList = localStorage.getItem('list') ? JSON.parse(localStorage.getItem('list')) : new Array();
+    const [list, setList] = useState(initiaList)
 
     useEffect(() => {
-        if (list.length) {
-            localStorage.setItem('list', JSON.stringify(list))
-        }
+        localStorage.setItem('list', JSON.stringify(list))
     }, [list])
 
     const handleSubmit = () => {
@@ -65,7 +60,7 @@ const ShoppingList = () => {
             </form>
             <div className="shopping-list">
                 <ul className="list">
-                    {list.map(
+                    {list && list.map(
                         item =>
                             !item.checked && (
                                 <ShoppingItem
@@ -78,7 +73,7 @@ const ShoppingList = () => {
                     )}
                 </ul>
                 <ul className="list-checked">
-                    {list.map(
+                    {list && list.map(
                         item =>
                             item.checked && (
                                 <ShoppingItem
