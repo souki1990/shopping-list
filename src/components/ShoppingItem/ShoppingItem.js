@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
+import './ShoppingItem.css';
 
 const ShoppingItem = props => {
-    const [checked, setChecked] = useState(props.item.checked)
 
     return (
         <li className="shopping-item">
@@ -9,11 +9,10 @@ const ShoppingItem = props => {
                 {props.item.designation}
                 <input
                     type="checkbox"
-                    onChange={e => {
-                        setChecked(e.currentTarget.checked);
+                    onChange={() => {
                         props.onCheck(props.item)
                     }}
-                    checked={checked}
+                    checked={props.item.checked}
                 />
                 <span className="checkmark"></span>
             </label>

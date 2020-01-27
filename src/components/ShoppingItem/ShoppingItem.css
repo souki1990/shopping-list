@@ -1,0 +1,113 @@
+.shopping-item {
+  display: flex;
+  padding: 10px;
+  text-transform: capitalize;
+}
+
+input[type="checkbox"] {
+  height: 2.2rem;
+  margin-right: 10px;
+  width: 1.2rem;
+}
+
+.shopping-item label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  pointer-events: inherit;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.input[type="checkbox"] div {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 4px;
+  border: solid 2px grey;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.shopping-item input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.shopping-item:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.shopping-item label .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.list-checked {
+  margin-top: 100px;
+}
+
+.list-checked .shopping-item {
+  text-decoration: line-through;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.remove-button {
+  display: none;
+  position: absolute;
+  right: 12px;
+}
+
+.remove-button:focus {
+  outline: none;
+}
+
+.delete-icon {
+  background: url(../../assets/delete_forever-24px.svg) no-repeat top left;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.shopping-item:hover {
+  border-bottom: solid 0.5px grey;
+}
+
+.shopping-item:hover .remove-button {
+  display: inline-block;
+}
+
+.remove-button :hover {
+  display: inline-block;
+}

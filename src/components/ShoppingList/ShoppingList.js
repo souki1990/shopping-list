@@ -1,20 +1,23 @@
 import React, { useState, useRef, useEffect } from 'react';
 import uuid from 'uuid/v4';
-import ShoppingItem from './shoppingItem';
+import ShoppingItem from '../ShoppingItem/ShoppingItem'
+import "./ShoppingList.css"
 
 const ShoppingList = () => {
     const form = useRef(null)
-    const [value, setValue] = useState('')
+    const [value, setValue] = useState('');
     const initiaList = localStorage.getItem('list') ? JSON.parse(localStorage.getItem('list')) : [];
-    const [list, setList] = useState(initiaList)
+    const [list, setList] = useState(initiaList);
 
     useEffect(() => {
-        localStorage.setItem('list', JSON.stringify(list))
+        if (list.length) {
+            localStorage.setItem('list', JSON.stringify(list));
+        }
     }, [list])
 
     const handleSubmit = () => {
         if (/\S/.test(value)) {
-            setList(list.concat([{ id: uuid(), designation: value }]))
+            setList(list.concat([{ id: uuid(), designation: value }]));
         }
     }
 
@@ -38,7 +41,7 @@ const ShoppingList = () => {
     }
 
     return (
-        <div className="shopping-list-container">
+        <div className="shopping-list-container" data-testid="shopping-list">
             <form
                 ref={form}
                 onSubmit={e => {

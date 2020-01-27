@@ -1,7 +1,7 @@
 import React from 'react';
+import ShoppingList from './components/ShoppingList/ShoppingList';
 import logo from './logo.svg';
 import './App.css';
-import ShoppingList from './components/shoppingList';
 
 function App() {
     return (
