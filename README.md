@@ -1,6 +1,9 @@
 A simple application that you could use to track of your shopping list or todo lists. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 The data is persisted using the HTML5 LocalStorage
 
+## Version
+e5ce2b40e077ee165c0a6b7598317089354c8922
+
 ## Features
 
 - Adding an item
