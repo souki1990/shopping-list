@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/souki1990/shopping-list/static/css/main.3bdc6ada.chunk.css",
+    "main.js": "/souki1990/shopping-list/static/js/main.98fea5e8.chunk.js",
+    "main.js.map": "/souki1990/shopping-list/static/js/main.98fea5e8.chunk.js.map",
+    "runtime-main.js": "/souki1990/shopping-list/static/js/runtime-main.837b6e3c.js",
+    "runtime-main.js.map": "/souki1990/shopping-list/static/js/runtime-main.837b6e3c.js.map",
+    "static/js/2.6d8c21ec.chunk.js": "/souki1990/shopping-list/static/js/2.6d8c21ec.chunk.js",
+    "static/js/2.6d8c21ec.chunk.js.map": "/souki1990/shopping-list/static/js/2.6d8c21ec.chunk.js.map",
+    "index.html": "/souki1990/shopping-list/index.html",
+    "precache-manifest.0e966b49bc4d7a61a5ab63d0c8f1bbe9.js": "/souki1990/shopping-list/precache-manifest.0e966b49bc4d7a61a5ab63d0c8f1bbe9.js",
+    "service-worker.js": "/souki1990/shopping-list/service-worker.js",
+    "static/css/main.3bdc6ada.chunk.css.map": "/souki1990/shopping-list/static/css/main.3bdc6ada.chunk.css.map",
+    "static/js/2.6d8c21ec.chunk.js.LICENSE": "/souki1990/shopping-list/static/js/2.6d8c21ec.chunk.js.LICENSE",
+    "static/media/App.css": "/souki1990/shopping-list/static/media/control_point-24px.ff4cb077.svg",
+    "static/media/ShoppingItem.css": "/souki1990/shopping-list/static/media/delete_forever-24px.fc8d7b3b.svg",
+    "static/media/logo.svg": "/souki1990/shopping-list/static/media/logo.d98a6a66.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.837b6e3c.js",
+    "static/js/2.6d8c21ec.chunk.js",
+    "static/css/main.3bdc6ada.chunk.css",
+    "static/js/main.98fea5e8.chunk.js"
+  ]
+}
